@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .column {
+        float: left;
+        width: 50%;
+        }
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        </style>
+    </head>
+    <body>
+        <script>
+            function sending(){
+                var trans = document.getElementById("trans".value);
+                var reci = document.getElementById("reci".value);
+                var val = document.getElementById("val".value);
+                var pass = document.getElementById("pass".value);
+
+            }
+        </script>
+
+        <h1><%=title%></h1>
+        <div class="row">
+            <div class="column" style="background-color:#FFB695;">
+                <h2>Address</h2>
+                <p><%=addr0%></p>
+                <p><%=addr1%></p>
+                <h5>Total</h5>
+            </div>
+            <div class="column" style="background-color:#96D1CD;">
+                <h2>Balance</h2>
+                <p><%=bal0%></p>
+                <p><%=bal1%></p>
+                <h5><%=total%></h5>
+            </div>
+        </div>
+        <form action="/send" method="GET">
+            <h3>Transmitter</h3>
+            <select name="trans">
+                <option value="address0"><%=addr0%></option>
+                <option value="address1"><%=addr1%></option>
+    
+            </select>
+            <br>
+            <h3>Recipient</h3>
+            <input type="text" name="reci">
+            <br>
+            <h3>Value</h3>
+            <input type="number" name="val">
+            <br>
+            <h3>Password</h3>
+            <input type="password" name="pass">
+            <input type="submit" value="Send">
+        </form>
+
+    </body>
+</html>
