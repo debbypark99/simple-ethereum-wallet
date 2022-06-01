@@ -1,0 +1,19 @@
+{
+    "name": "ethwallet",
+    "version": "1.0.0",
+    "description": "Simple Ethereum Wallet DApp",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node index.js"
+    },
+    "author": "Debby Park",
+    "license": "MIT",
+    "dependencies": {
+      "cookie-parser": "^1.4.5",
+      "ejs": "^3.1.6",
+      "express": "^4.17.1",
+      "truffle-contract": "^4.0.31",
+      "web3": "^1.5.2"
+    }
+  }
